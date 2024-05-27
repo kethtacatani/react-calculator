@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import { evaluate, log, re } from "mathjs";
+import { evaluate } from "mathjs";
 
 function App() {
   const [equals, setEquals] = useState<string>("0");
   const [formula, setFormula] = useState<string>("");
   const [hasDot, setHasDot] = useState<boolean>(false);
-  const [prevAns, setPrevAns] = useState<string>("");
 
   const handleClick = (char: string) => {
     if (char === "clear") {
