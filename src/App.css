@@ -1,0 +1,128 @@
+
+:root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Custom scrollbar styles for Webkit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovering over the scrollbar thumb */
+}
+
+.container{
+  background-color: rgb(14, 14, 14);
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  padding-top: 15px;
+  border-radius: 30px;
+  border: 5px solid rgb(84, 84, 84);
+  container-name: body
+}
+
+.formulaScreen, .outputScreen{
+  width: 450px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: right;
+  font-size: 70px;
+  height: 100px;
+  color: rgb(234, 234, 234);
+
+}
+
+.formulaScreen{
+  z-index: 2;
+  font-size: 50px;
+  color: aqua;
+  height: 70px;
+}
+#screen{
+  padding-right: .8em;
+  margin-bottom: .5em;
+  height: 180px;
+  border-bottom: 2px solid rgb(151, 151, 151);
+}
+.row-right{
+  display: flex;
+  justify-content: flex-end;
+}
+ #clear{
+  background-color: brown;
+  height: 80px;
+ }
+ #equals{
+  background-color: rgb(19, 200, 200);
+  color: black;
+ }
+
+button{
+  text-align: center;
+  padding-top: 5px;
+  background-color: #2a2a2a;
+  height: 100px;
+  width: 100px;
+  margin: 0.5rem;
+  font-size: 40px;
+  color: aliceblue;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+button:active{
+  background-color: #646464;
+}
+#equals:active{
+  background-color: rgb(93, 255, 255);
+}
+#clear:active{
+  background-color:  rgb(244, 59, 59);
+}
+
+@media screen and (max-width: 600px) {
+  button{
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+  }
+  #clear{
+    height: 40px;
+   }
+   .outputScreen{
+    width: 250px;
+    font-size: 40px;
+    height: 53px;
+    margin-top: -14px;
+
+  }
+  
+  .formulaScreen{
+    width: 250px;
+    font-size: 30px;
+    margin-top: -5px;
+    height: 42px
+  }
+  #screen{
+    height: 80px;
+    padding-right: 7px;
+  }
+  ::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+    height: 4px; /* Height of the scrollbar */
+  }
+}
